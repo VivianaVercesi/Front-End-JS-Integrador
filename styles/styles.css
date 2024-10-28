@@ -7,53 +7,208 @@ body {
     height: 100vh;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinea el contenido hacia abajo */
-    align-items: center; /* Centra horizontalmente */
-    text-align: center; /* Centra el texto dentro del párrafo */
-    padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
-    box-sizing: border-box; 
+    align-items: center;
 }
-
+ /*Estilo del nombre*/
 #trademark {
     font-family: "Oleo Script", system-ui;
-    font-weight: 60;
+    font-weight: 100;
     font-style: normal;
-    color: rgb(89, 66, 92);
+    color: rgb(74, 57, 77);
     font-size: 3.5rem;
     text-align: center; 
     z-index: 1; 
     margin-top: 6rem;
 }
 
+/*Estilo de la frase de la página de inicio*/
 .frase {
     font-family: "Oleo Script", system-ui;
     font-weight: 100;
     font-style: normal;
-    color: rgb(130, 99, 134);
+    color: rgb(97, 77, 99);
     font-size: 1.5rem;
     position: relative;
     z-index: 1; 
     margin-top: 13rem;
-
+    text-align: center;
 }
 
-.boton {
+/*Estilo del botón de la página de inicio*/
+#btn-in {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.5rem 0.6rem;
     border: solid rgb(130, 99, 134);
     color: rgb(89, 66, 92);
     text-decoration: none;
     border-radius: 20px;
     margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
+ 
+#btn-in:hover {
+    background-color: rgb(89, 66, 92);
+    color: whitesmoke;
+}
+/*Estilo de la barra de navegación*/
+.navbar {
+    background-color: #747b77;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: inline-flex;
+    flex-wrap: wrap; /* Para que los elementos se adapten */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Centra los enlaces */
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: rgb(54, 27, 56);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+/* Efecto de hover */
+.nav-list a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+
+
+/*Estilo de la lista de productos*/
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center; /* Alinea el contenido hacia abajo */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto dentro del párrafo */
+    padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
+    box-sizing: border-box; 
+}
+
+
+.flex-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+ 
+.product-card {
+    margin: 1rem 0;
+}
+
+.product-image{
+    display: block;
+    margin: 0 auto;
+    max-width: 80%; /* La imagen ocupa todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+h1 {
+    font-family: "Oleo Script", system-ui;
+    color: rgb(74, 57, 77);
+    font-size: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(74, 57, 77);
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+/* Estilo para el menú desplegable */
+#size {
+    width: 7rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Quita el estilo por defecto del navegador */
+    background-color: #f9f9f9;
+    color: #4f4257;
+    font-weight: bold;
+  }
+  #size option {
+    padding: 1rem;
+    font-weight: bold;    
+  }
+#colorPicker {
+    width: 7rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Quita el estilo por defecto del navegador */
+    background-color: #f9f9f9;
+    color: #4f4257;
+    font-weight: bold;
+  }
+  
+  
+  #colorPicker option {
+    padding: 10px;
+    font-weight: bold;
+    color: #fff; 
+  }
+  
+ #btn-purchase {
+    display: inline-block;
+
+    padding: 0.5rem 0.6rem;
+    border: solid rgb(130, 99, 134);
+    color: rgb(89, 66, 92);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+ }
+ 
+/*Estilo de la sección reseñas*/
+
+/*Estilo de la sección contacto*/
+label {
+    color: rgb(74, 57, 77);
+    font-size: 1.4rem;
+    text-align: center 
+}
+/*Estilo de la sección redes*/
 
 /*Responsive*/
 
 @media (min-width: 480px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Alinea el contenido hacia abajo */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Centra el texto dentro del párrafo */
+        padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
+        box-sizing: border-box; 
+    }
+    
+    
     #trademark {
         font-size: 4rem; 
     }
@@ -61,22 +216,72 @@ body {
     .frase {
         font-size: 2rem;
     }
+
+    #btn-in {
+        font-size: 2rem;
+    }
+
+    .navbar-li a {
+        font-size: 1rem;
+    }
+    .navbar-li{
+        float: right;
+    }
+
+    h1 {
+        font-size: ;
+    }
 }
 
 @media (min-width:  768px) {
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: row wrap;
+        justify-content: center; /* Alinea el contenido hacia abajo */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Centra el texto dentro del párrafo */
+        padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
+        box-sizing: border-box; 
+    }
+    
+    
     #trademark {
-        font-size: 6rem; 
+        font-size: 5rem; 
     }
     .frase {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    #btn-in {
+        font-size: 2rem;
+    }
+    .navbar-li a {
+        font-size: 1rem;
     }
 }
 
 @media (min-width: 1080px) {
+    #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: row wrap;
+        justify-content: center; /* Alinea el contenido hacia abajo */
+        align-items: center; /* Centra horizontalmente */
+        text-align: center; /* Centra el texto dentro del párrafo */
+        padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
+        box-sizing: border-box; 
+    }
+    
     #trademark {
-        font-size: 8rem; 
+        font-size: 7rem; 
     }
     .frase {
-        font-size: 4rem;
+        font-size: 3.5rem;
+    }
+    #btn-in {
+        font-size: 3rem;
+    }
+    .navbar-li a {
+        font-size: 1rem;
     }
 }
