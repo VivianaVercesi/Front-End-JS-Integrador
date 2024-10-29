@@ -46,6 +46,7 @@ body {
     text-decoration: none;
     border-radius: 20px;
     margin-top: 3rem;
+    margin-bottom: 2rem;
     font-size: 1.5rem;
     font-weight: bolder;
 }
@@ -55,38 +56,38 @@ body {
     color: whitesmoke;
 }
 /*Estilo de la barra de navegación*/
-.navbar {
+#nav {
     background-color: #747b77;
     padding: 1rem;
+    padding: 0.5em 0em 0.5em 0.5em; 
 }
+.navbar .nav-item:hover{
+    font-weight:bolder;
+    color: whitesmoke;
+    }
 
-.nav-list {
-    display: inline-flex;
-    flex-wrap: wrap; /* Para que los elementos se adapten */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center; /* Centra los enlaces */
-}
-
-.nav-list li {
-    margin: 0 1rem;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: rgb(54, 27, 56);
+  
+.nav .navbar-brand {
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    color: rgb(89, 66, 92);
+        
 }
-
-/* Efecto de hover */
-.nav-list a:hover {
-    background-color: #555;
-    border-radius: 4px;
+      
+.navbar .nav-link {
+    color: rgb(89, 66, 92); 
+     margin: 0 10px; 
+        
 }
-
-
+      
+.navbar .nav-link:hover {
+    background-color: #4c4974;
+    font-weight: bolder;
+}
+      
+.navbar-toggler {
+    border-color: #4c4974; 
+}
+      
 
 
 /*Estilo de la lista de productos*/
@@ -108,24 +109,27 @@ body {
     flex-direction: column;
   }
  
-.product-card {
-    margin: 1rem 0;
+.card {
+    margin: 1rem 2rem;
+    border: rgb(130, 99, 134) solid;
+    border-radius: 15px;
 }
 
 .product-image{
     display: block;
     margin: 0 auto;
-    max-width: 80%; /* La imagen ocupa todo el ancho de la tarjeta */
+    max-width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 10px;
     object-fit: cover;
   }
-
+   
 h1 {
     font-family: "Oleo Script", system-ui;
     color: rgb(74, 57, 77);
     font-size: 2rem;
     text-align: center;
+    padding-top: 5rem;
 }
 
 h2 {
@@ -228,10 +232,6 @@ label {
         float: right;
     }
 
-    h1 {
-        font-size: ;
-    }
-}
 
 @media (min-width:  768px) {
     #container {
