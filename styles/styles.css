@@ -21,7 +21,7 @@ body {
     font-size: 3.5rem;
     text-align: center; 
     z-index: 1; 
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 /*Estilo de la frase de la página de inicio*/
@@ -58,8 +58,12 @@ body {
 /*Estilo de la barra de navegación*/
 #nav {
     background-color: #747b77;
-    padding: 1rem;
-    padding: 0.5em 0em 0.5em 0.5em; 
+    position: fixed; /* Hace que la nav sea fija */
+    top: 0; /* Coloca la nav en la parte superior */
+    width: 100%; /* Asegura que la nav ocupe todo el ancho de la página */
+    background-color: #747b77; 
+    padding: 1rem; /* Espaciado interno */
+    z-index: 1000; /* Asegura que la nav esté por encima de otros elementos */ 
 }
 .navbar .nav-item:hover{
     font-weight:bolder;
@@ -109,7 +113,7 @@ body {
     flex-direction: column;
   }
  
-.card {
+.product-card {
     margin: 1rem 2rem;
     border: rgb(130, 99, 134) solid;
     border-radius: 15px;
@@ -124,7 +128,7 @@ body {
     object-fit: cover;
   }
    
-h1 {
+.title {
     font-family: "Oleo Script", system-ui;
     color: rgb(74, 57, 77);
     font-size: 2rem;
@@ -132,14 +136,26 @@ h1 {
     padding-top: 5rem;
 }
 
-h2 {
+.product-details h2 {
     color: rgb(74, 57, 77);
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     text-align: center;
     font-weight: bold;
+    margin-top: 1rem;
+    font-style: italic;
 }
 
-
+.product-details button {
+    display: inline-block;
+    padding: 0.5rem 0.6rem;
+    border: solid rgb(130, 99, 134);
+    color: rgb(89, 66, 92);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+ }
 
 /* Estilo para el menú desplegable */
 #size {
@@ -176,18 +192,7 @@ h2 {
     color: #fff; 
   }
   
- #btn-purchase {
-    display: inline-block;
-
-    padding: 0.5rem 0.6rem;
-    border: solid rgb(130, 99, 134);
-    color: rgb(89, 66, 92);
-    text-decoration: none;
-    border-radius: 20px;
-    margin-top: 3rem;
-    font-size: 1.5rem;
-    font-weight: bolder;
- }
+ 
  
 /*Estilo de la sección reseñas*/
 
@@ -284,4 +289,4 @@ label {
     .navbar-li a {
         font-size: 1rem;
     }
-}
+}}
