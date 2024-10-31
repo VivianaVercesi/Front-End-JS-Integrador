@@ -22,6 +22,7 @@ body {
     text-align: center; 
     z-index: 1; 
     margin-top: 3rem;
+    text-shadow: 2px 2px 4px rgba(45, 32, 48, 0.5);
 }
 .trademark {
     font: italic;
@@ -37,6 +38,7 @@ body {
     z-index: 1; 
     margin-top: 13rem;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(45, 32, 48, 0.5);
 }
 
 /*Estilo del botón de la página de inicio*/
@@ -104,6 +106,7 @@ body {
 /*Estilo de la lista de productos*/
 .title {
     font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(45, 32, 48, 0.5);
 }
 #container {
     display: flex;
@@ -208,8 +211,22 @@ body {
     color: #fff; 
   }
   
- 
- 
+/*Estilo de la sección nosotros*/
+#about .title {
+    margin: 2rem auto;
+    text-shadow: 2px 2px 4px rgba(45, 32, 48, 0.5);
+} 
+.description {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 100;
+    font-style: normal;
+    color: #3a333e;
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(45, 32, 48, 0.5);
+    padding: 1.5rem;
+}
+
 /*Estilo de la sección reseñas*/
 
 /*Estilo de la sección contacto*/
@@ -276,7 +293,9 @@ body {
     .product-card {
         max-width: 60%;
     }
- 
+    .description {
+        font-size: 1.5rem;
+    }
     #contact label, input, .btn-in {
         font-size: 1.4rem;
     }
@@ -322,7 +341,9 @@ body {
     .product-card {
         max-width: 26%;
     }
-    
+    .description {
+        font-size: 2rem;
+    }
     #contact form{
         width: 60%;
     }
@@ -352,6 +373,7 @@ body {
     
     #trademark {
         font-size: 7rem; 
+        padding-top: 1rem;
     }
     .frase {
         font-size: 3.5rem;
@@ -370,6 +392,9 @@ body {
     }
     .product-image{
         margin: 3rem auto;
+    }
+    .description {
+        font-size: 2.2rem;
     }
     #contact form{
         width: 60%;
