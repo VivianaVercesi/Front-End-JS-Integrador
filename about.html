@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nosotros</title>
+    <!--Archivo de estilos-->
+    <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+    <!--Letra para el header-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./products.html">Catálogo</a></li>
-                <li><a href="./about.html">Nosotros</a></li>
-                <li><a href="./reviews.html">Opiniones</a></li>
-                <li><a href="./contact.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./products.html">Catálogo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./reviews.html">Reseñas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
     </header>
+    <main>
+        <h1>Nuestra Historia</h1>
+        <p><span class="trademark">El Atelier de Ana</span> nació del amor por la moda y la creatividad de Ana, una diseñadora con una visión única para realzar la belleza de cada mujer. Desde joven, Ana encontraba inspiración en los colores, texturas y detalles de los trajes antiguos que veía en revistas y desfiles. Con el tiempo, desarrolló un estilo propio, una fusión entre la elegancia clásica y las tendencias modernas, siempre con el objetivo de que cada prenda cuente una historia y se sienta como una segunda piel.</p>
+        <p>En 2015, después de años de perfeccionar sus habilidades y construir una red de artesanos que comparten su pasión, Ana abrió su primer atelier en un pequeño estudio en el corazón de la ciudad. Lo que comenzó como un espacio íntimo donde trabajaba a mano cada diseño se convirtió en un punto de encuentro para mujeres que buscaban algo especial, desde un vestido de fiesta hasta un atuendo elegante para eventos únicos.</p>
+        <p>Cada prenda de <span class="trademark">El Atelier de Ana</span> es más que una creación de moda: es un homenaje al estilo, la autenticidad y la confianza de la mujer moderna. Hoy, con clientes de diferentes partes del país, nuestra misión sigue siendo la misma: hacer que cada persona que viste una de nuestras piezas se sienta única y especial, con un estilo que refleja su verdadera esencia.</p>
+    </main>
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

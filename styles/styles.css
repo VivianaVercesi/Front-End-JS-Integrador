@@ -23,7 +23,9 @@ body {
     z-index: 1; 
     margin-top: 3rem;
 }
-
+.trademark {
+    font: italic;
+}
 /*Estilo de la frase de la página de inicio*/
 .frase {
     font-family: "Oleo Script", system-ui;
@@ -38,7 +40,7 @@ body {
 }
 
 /*Estilo del botón de la página de inicio*/
-#btn-in {
+.btn-in {
     display: inline-block;
     padding: 0.5rem 0.6rem;
     border: solid rgb(130, 99, 134);
@@ -51,7 +53,7 @@ body {
     font-weight: bolder;
 }
  
-#btn-in:hover {
+.btn-in:hover {
     background-color: rgb(89, 66, 92);
     color: whitesmoke;
 }
@@ -61,9 +63,13 @@ body {
     position: fixed; /* Hace que la nav sea fija */
     top: 0; /* Coloca la nav en la parte superior */
     width: 100%; /* Asegura que la nav ocupe todo el ancho de la página */
-    background-color: #747b77; 
     padding: 1rem; /* Espaciado interno */
     z-index: 1000; /* Asegura que la nav esté por encima de otros elementos */ 
+}
+
+.navbar .navbar-item {
+    color:rgb(43, 25, 45)!important; 
+    font-weight: bold;
 }
 .navbar .nav-item:hover{
     font-weight:bolder;
@@ -77,15 +83,16 @@ body {
         
 }
       
-.navbar .nav-link {
+.navbar .nav-item {
     color: rgb(89, 66, 92); 
      margin: 0 10px; 
         
 }
       
 .navbar .nav-link:hover {
-    background-color: #4c4974;
+    
     font-weight: bolder;
+    color:whitesmoke;
 }
       
 .navbar-toggler {
@@ -95,6 +102,9 @@ body {
 
 
 /*Estilo de la lista de productos*/
+.title {
+    font-size: 2rem;
+}
 #container {
     display: flex;
     flex-direction: column;
@@ -103,6 +113,7 @@ body {
     text-align: center; /* Centra el texto dentro del párrafo */
     padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
     box-sizing: border-box; 
+    
 }
 
 
@@ -110,22 +121,27 @@ body {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; 
   }
  
 .product-card {
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
     border: rgb(130, 99, 134) solid;
     border-radius: 15px;
+    background-color: #f4daf2;
+    max-width: 90%;
+    
 }
 
 .product-image{
     display: block;
-    margin: 0 auto;
+    margin: 2rem auto;
+    size: 80%;
     max-width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
     height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
+    width: 80%;
   }
    
 .title {
@@ -153,7 +169,7 @@ body {
     text-decoration: none;
     border-radius: 20px;
     margin-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bolder;
  }
 
@@ -197,16 +213,38 @@ body {
 /*Estilo de la sección reseñas*/
 
 /*Estilo de la sección contacto*/
-label {
+#contact {
+    display:flex;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    max-width: 100%;
+}
+
+#contact label, input {
     color: rgb(74, 57, 77);
-    font-size: 1.4rem;
-    text-align: center 
+    font-size: 1.3rem;
+    width: 100%; 
+}
+
+#contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 1rem 0;
+}
+
+#contact .btn-in {
+   display: block;
+   margin: 1rem auto;
 }
 /*Estilo de la sección redes*/
 
 /*Responsive*/
 
 @media (min-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
     #container {
         display: flex;
         flex-direction: column;
@@ -216,8 +254,7 @@ label {
         padding-bottom: 5rem; /* Ajusta el espacio entre el contenido y el borde inferior */
         box-sizing: border-box; 
     }
-    
-    
+       
     #trademark {
         font-size: 4rem; 
     }
@@ -226,19 +263,35 @@ label {
         font-size: 2rem;
     }
 
-    #btn-in {
+    .btn-in {
         font-size: 2rem;
     }
 
-    .navbar-li a {
-        font-size: 1rem;
+    .nav-item {
+        font-size: 1.5rem;
     }
-    .navbar-li{
-        float: right;
+    .flex-container {
+        margin:0 2rem;
+        }
+    .product-card {
+        max-width: 60%;
+    }
+ 
+    #contact label, input, .btn-in {
+        font-size: 1.4rem;
+    }
+    #contact input {
+        padding: 0.5rem 0;
+    }
+    #contact textarea::placeholder{
+        font-size: 1.2rem;
     }
 
-
+}
 @media (min-width:  768px) {
+    .title {
+        font-size: 2.8rem;
+    }
     #container {
         display: flex;
         flex-direction: row;
@@ -257,15 +310,35 @@ label {
     .frase {
         font-size: 2.5rem;
     }
-    #btn-in {
+    .btn-in {
         font-size: 2rem;
     }
-    .navbar-li a {
-        font-size: 1rem;
+    .nav-item {
+        font-size: 1.5rem;
+    }
+    .flex-container {
+        margin:0 2rem;
+        }
+    .product-card {
+        max-width: 26%;
+    }
+    
+    #contact form{
+        width: 60%;
+    }
+    #contact label, input, .btn-in {
+        font-size: 1.6rem;
+    }
+    #contact textarea::placeholder{
+        font-size: 1.4rem;
     }
 }
 
 @media (min-width: 1080px) {
+    .title {
+        font-size: 5rem;
+        margin: 2rem;
+    }
     #container {
         display: flex;
         flex-direction: row;
@@ -283,10 +356,28 @@ label {
     .frase {
         font-size: 3.5rem;
     }
-    #btn-in {
+    .btn-in {
         font-size: 3rem;
     }
-    .navbar-li a {
-        font-size: 1rem;
+    .nav-item {
+        font-size: 1.9rem;
     }
-}}
+    .flex-container {
+        margin:0 2rem;
+        }
+    .product-card {
+        max-width: 26%;
+    }
+    .product-image{
+        margin: 3rem auto;
+    }
+    #contact form{
+        width: 60%;
+    }
+    #contact label, input, .btn-in {
+        font-size: 1.9rem;
+    }
+    #contact textarea::placeholder{
+        font-size: 1.7rem;
+    }
+}
