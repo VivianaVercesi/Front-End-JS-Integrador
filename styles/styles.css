@@ -344,7 +344,31 @@ body {
    margin: 1rem auto;
 }
 
+/*Estilo de la sección ubicación*/
+#where {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 480;
+    color: #4f4257;
+    margin-top: 7rem;
+}
 
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+   
+}
+.responsive-iframe {
+    position: absolute;
+    transform: translateX(-50%); 
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 90%;
+    border: solid #4f4257;
+    border-radius: 10px;
+  }
 /*Responsive*/
 
 @media (min-width: 480px) {
@@ -419,7 +443,9 @@ body {
     #contact textarea::placeholder{
         font-size: 1.2rem;
     }
-
+    #where {
+        font-size: 1.5rem;
+    }
 }
 @media (min-width:  768px) {
     .title {
@@ -492,7 +518,15 @@ body {
     #contact textarea::placeholder{
         font-size: 1.4rem;
     }
+    #where {
+        font-size: 1.7rem;
+    }
+    .responsive-iframe {
+        width: 60%;
+        height: 50%;
+    }
 }
+
 
 @media (min-width: 1080px) {
     .title {
@@ -568,5 +602,12 @@ body {
     }
     #contact textarea::placeholder{
         font-size: 1.7rem;
+    }
+    #where {
+        font-size: 2rem;
+    }
+    .responsive-iframe {
+        width: 60%;
+        height: 50%;
     }
 }
