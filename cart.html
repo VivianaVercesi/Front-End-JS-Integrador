@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carrito de compras</h1>
+    </header>
+    <main>
+        <section (id="products")>
+            <ul class="product-list">
+                <li class="product-item">
+                    <h3></h3>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </li>
+
+            </ul>
+        </section>
+        <section (id="checkout")>
+            <h2>Resumen de compra</h2>
+            <p class="total">Total a pagar:</p>
+            <form action="" class="checkout"></form>
+
+
+        </section>
+        <footer>
+            <p> © 2024 Comercio Mayorista</p>
+        </footer>
+    </main>  
+      <!--main
+         if !carrito.active
+            p.alert El carrito ya expiró.
+         else
+            section.products
+               h2 Productos en el carrito
+               ul.product-list
+                  - var total = 0
+                  each item in carrito.products
+                     - total += item.quantity * item.product.price
+                     li.product-item(data-id=item.product._id)
+                        h3= item.product.name
+                        p.categoria Categoría: #{item.product.category}
+                        p.precio-unitario Precio unitario: $#{item.product.price}
+                        p.cantidad Cantidad: #{item.quantity}
+                        p.precio-final Precio final: $#{item.quantity * item.product.price}
+            section.checkout
+               h2 Resumen de Compra
+               p.total Total a pagar: $#{total}
+               form.checkout-form(action='/order', method="POST")
+                  fieldset
+                     legend Modalidad de pago
+                     label(for="pago-transferencia") 
+                        input#pago-transferencia(type="radio", name="tipoPago", value="transferencia", checked) 
+                        | Transferencia bancaria
+                     br
+                     label(for="pago-credito") 
+                        input#pago-credito(type="radio", name="tipoPago", value="credito") 
+                        | Tarjeta de Crédito
+                  input(type="hidden", name="cartId", value=carrito._id)
+                  button.btn(type="submit") Comprar
+     -->
+</body>
+</html>

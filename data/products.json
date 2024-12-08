@@ -1,0 +1,165 @@
+[
+    {
+        "id":1,
+        "name": "Rosa Eternelle",
+        "price": 1000,
+        "description": "Un vestido que combina el romanticismo del rosa pálido con el misterio del verde oscuro en la sobrefalda, compuesto por múltiples capas superpuestas que evocan la delicadeza de los pétalos de una flor en plena floración.",
+        "image": "Rosa Eternelle.jpg",
+        "review":"Compré un vestido para una boda, ¡y fue increíble! La tela es de excelente calidad y se ajusta perfectamente. Recibí muchos cumplidos. ¡Recomiendo El Atellier de Ana al 100%!",
+        "reviewAuthor":"María G."
+    },
+    {
+        "id":2,
+        "name": "Magnolia Sublime",
+        "price": 1000,
+        "description": "Un vestido de ensueño en tonos rosados suaves, con detalles florales bordados a mano y una silueta fluida que evoca romanticismo.",
+        "image": "Magnolia Sublime.jpg",
+        "review":"Estoy encantada con mi compra. La atención al cliente fue rápida y amable, y el envío llegó antes de lo esperado. Además, los detalles del vestido son preciosos. ¡Definitivamente volveré a comprar!",
+        "reviewAuthor":"Ana L."
+    },
+    {
+        "id":3,
+        "name": "Azucena Estival",
+        "price": 1000,
+        "description": "Un diseño inspirado en la frescura del verano, con una falda amplia que evoca un jardín vibrante, decorada con franjas multicolores que añaden dinamismo y alegría.",
+        "image": "Azucena Estival.jpg",
+        "review":"Encontré el vestido ideal para una gala, y la experiencia de compra fue súper fácil. Me encantó la sección de catálogo; es muy intuitiva. ¡Gracias por un servicio tan increíble!",
+        "reviewAuthor":"Lucía M."
+    },
+    {
+        "id":4,
+        "name": "Azalea de Ensueño",
+        "price": 1000,
+        "description": "Un vestido con detalles asimétricos y bordados dorados que capturan la esencia de una noche mágica.",
+        "image": "Azalea de Ensueño.jpg",
+        "review":"He comprado varios vestidos aquí, y cada uno supera mis expectativas. La variedad de estilos y los precios son inigualables. ¡Me hacen sentir como una reina!",
+        "reviewAuthor":"Elena R."
+    },
+    {
+        "id":5,
+        "name": "Peonía de Medianoche",
+        "price": 1000,
+        "description": "Con un profundo tono antracita y detalles de encaje, este vestido evoca la sofisticación de la noche.",
+        "image": "Peonía de Medianoche.jpg",
+        "review":"¡El vestido que pedí es simplemente perfecto! El diseño es único, y la calidad es excelente. Sin duda, recomendaré El Atellier de Ana a mis amigas. ¡Gracias por hacerme sentir especial!",
+        "reviewAuthor":"Sofía C."
+    },
+    {
+        "id":6,
+        "name": "Dalia Serenata",
+        "price": 1000,
+        "description": "Un vestido de ensueño hecho completamente en seda rosa, con una falda amplia que fluye como un río de suavidad, ideal para dar un toque de gracia y sofisticación.",
+        "image": "Dalia Serenata.jpg",
+        "review":"Estoy feliz con mi vestido de fiesta. La página web es fácil de navegar, y la descripción del vestido coincidía exactamente con lo que recibí. ¡Gracias por la experiencia tan maravillosa!",
+        "reviewAuthor":"Clara J."
+    },
+    {
+        "id":7,
+        "name": "Rosa Celta",
+        "price": 1000,
+        "description": "Vestido en rosa suave con patrones intrincados inspirados en diseños celtas, ideal para destacar en cualquier evento.",
+        "image": "Rosa Celta.jpg",
+        "review":"La atención al cliente fue excelente y me ayudaron a elegir la talla correcta. El vestido llegó a tiempo y superó todas mis expectativas. ¡Se ha convertido en mi tienda favorita para vestidos elegantes!",
+        "reviewAuthor":"Isabel F."
+    },
+    {
+        "id":8,
+        "name": "Camelia de Cristal",
+        "price": 1000,
+        "description": "Un vestido que mezcla lo clásico y lo atrevido, con un tono rosa delicado complementado por un encaje negro en la parte superior, añadiendo un toque de dramatismo y sensualidad.",
+        "image": "Camelia de Cristal.jpg",
+        "review":"Compré un vestido para mi graduación, y no podía estar más contenta. Se nota que los materiales son de alta calidad, y los acabados están muy bien hechos. ¡Gracias, Atellier de Ana, por un producto tan hermoso!",
+        "reviewAuthor":"Carolina T."
+    },
+    {
+        "id":9,
+        "name": "Dalia Majestuosa",
+        "price": 1000,
+        "description": "Un diseño etéreo en rosa pastel, elaborado con varias capas de tela ligera y decorado con bordados plateados que reflejan un brillo majestuoso, perfecto para momentos inolvidables.",
+        "image": "Dalia Majestuosa.jpg",
+        "review":"La experiencia de compra fue perfecta desde el inicio. Pedí un vestido para una ocasión especial, y me sentí fabulosa usándolo. El Atellier de Ana es la tienda ideal para encontrar vestidos únicos y elegantes.",
+        "reviewAuthor":"Gabriela S."
+    },
+    {
+        "id":10,
+        "name": "Mirlo de Plata",
+        "price": 1000,
+        "description": "Un diseño en negro profundo con bordados plateados que evocan la gracia de un ave en vuelo nocturno.",
+        "image": "Mirlo de Plata.jpg",
+        "review": "El vestido fue todo lo que esperaba y más. Me sentí hermosa y cómoda durante toda la noche. ¡La calidad es fantástica y el precio justo!",
+        "reviewAuthor":"Valeria A."
+    },
+    {
+        "id":11,
+        "name": "Cisne Esmeralda",
+        "price": 1000,
+        "description": "Vestido verde oscuro con un diseño de líneas elegantes y detalles brillantes que simulan las plumas de un cisne.",
+        "image": "Cisne Esmeralda.jpg",
+        "review": "Excelente servicio y rapidez. Pedí mi vestido con urgencia y llegó justo a tiempo. Además, me encantó cómo se ajustaba a mi figura. ¡Gracias, El Atellier de Ana!",
+        "reviewAuthor":"Natalia V."
+    },
+    {
+        "id":12,
+        "name": "Garza Azul",
+        "price": 1000,
+        "description": "Un diseño clásico con un toque moderno, en tonos azules con detalles de pedrería que añaden un brillo discreto.",
+        "image": "Garza Azul.jpg",
+        "review":"Nunca había comprado en línea, pero esta tienda me dio mucha confianza. Los detalles del vestido y el acabado son perfectos. ¡Ya estoy buscando mi próxima compra aquí!",
+        "reviewAuthor":"Paola D."
+    },
+    {
+        "id":13,
+        "name": "Fénix Dorado",
+        "price": 1000,
+        "description": "Un diseño digno de la realeza, en un dorado resplandeciente con detalles como mangas caídas y una sobrefalda fluida que evocan el esplendor y añaden un aire de realeza y elegancia a quien lo lleve.",
+        "image": "Fénix Dorado.jpg",
+        "review":"La selección de vestidos es increíble y moderna. Pude encontrar un diseño único que no había visto en ningún otro lugar. ¡Sin duda una experiencia de cinco estrellas!",
+        "reviewAuthor":"Laura S."
+    },
+    {
+        "id":14,
+        "name": "Iris de Estrellas",
+        "price": 1000,
+        "description": "Vestido strapless de diseño celestial, con un cinturón negro que define la cintura y un degradado de colores que inicia en tonos celeste suaves y fluye hasta un tono rojizo suave, como un amanecer en el horizonte.",
+        "image": "Iris de Estrellas.jpg",
+        "review":"Cada detalle está bien cuidado, desde el empaque hasta la entrega. El vestido me quedaba como un guante, y fue un éxito en la fiesta. ¡Gracias por tan excelente trabajo!",
+        "reviewAuthor":"Florencia P."
+    },
+    {
+        "id":15,
+        "name": "Rosa Diamante",
+        "price": 1000,
+        "description": "Inspirado en la frescura del verano, este vestido destaca por sus capas ligeras de tela traslúcida en un delicado tono pastel.",
+        "image": "Rosa Diamante.jpg",
+        "review":"Tenía muchas dudas, pero el equipo de atención al cliente fue muy amable y me ayudó a encontrar la talla perfecta. El vestido es precioso, y volveré a comprar sin dudarlo.",
+        "reviewAuthor":"Marta R."
+    },
+    {
+        "id":16,
+        "name": "Colibrí Imperial",
+        "price": 1000,
+        "description": "Un diseño elegante con cuello bote en rosa tenue, bordados plateados intrincados y una falda que se desliza tras la figura, ideal para una entrada triunfal.",
+        "image": "Colibrí Imperial.jpg",
+        "review":"¡El vestido superó todas mis expectativas! La tela es de alta calidad y el corte es perfecto. Me sentí espectacular, y recibí tantos cumplidos. Definitivamente recomendaré esta tienda.",
+        "reviewAuthor":"Juliana C."
+    },
+    {
+        "id":17,
+        "name": "Alondra Celestial",
+        "price": 1000,
+        "description": "Elegancia pura en un vestido celeste perlado, con un corsé ajustado y una falda amplia que deslumbra con su delicado brillo.",
+        "image": "Alondra Celestial.jpg",
+        "review":"Es mi segunda compra en El Atellier de Ana, y estoy igual de encantada que la primera vez. El servicio es impecable y el vestido es hermoso. ¡Gracias por crear prendas tan elegantes y únicas!",
+        "reviewAuthor":"Martina D."
+    },
+    {
+        "id":18,
+        "name": "Azulillo de Seda",
+        "price": 1000,
+        "description": "Un vestido que combina el encanto del pasado con un estilo moderno. En un azul profundo, su escote corazón y la falda más larga en la parte posterior añaden un aire de dama antigua renovada.",
+        "image": "Azulillo de Seda.jpg",
+        "review":"Estoy muy satisfecha con mi compra. El vestido es elegante y cómodo, perfecto para la ocasión especial que tenía. La calidad y el diseño son excepcionales. ¡Definitivamente volveré a comprar aquí!",
+        "reviewAuthor":"Andrea M."
+    }
+
+]

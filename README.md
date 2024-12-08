@@ -27,7 +27,7 @@ El proyecto **El Atellier de Ana** busca crear una experiencia digital atractiva
 ## Estructura del Proyecto
 El proyecto está organizado en los siguientes archivos y carpetas:
 
-PROYECTO_INTEGRADOR/ ├── index.html # Página principal 
+PROYECTO_INTEGRADOR/├── index.html # Página principal 
                     ├── products.html # Catálogo de productos 
                     ├── about.html # Página de "Nosotros" 
                     ├── reviews.html # Página de opiniones de clientes 
