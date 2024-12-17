@@ -8,7 +8,8 @@
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Instalación y Configuración](#instalación-y-configuración)
-- [Autores](#autores)
+- [Autor](#autores)
+- [Imágen del proyecto](.assets/AteAna.png)
 
 ## Descripción del Proyecto
 El proyecto **El Atellier de Ana** busca crear una experiencia digital atractiva para una tienda de moda femenina, ofreciendo un catálogo de vestidos de alta costura, una sección sobre la historia de la marca, reseñas de clientes y una página de contacto.
@@ -44,8 +45,10 @@ PROYECTO_INTEGRADOR/├── index.html # Página principal
    Abrir en el navegador: Abre index.html en tu navegador para ver el sitio.
 1. **Abrir con githubpages**: https://vivianavercesi.github.io/Front-End-JS-Integrador/
 
-## Autores
+## Autor
 Proyecto desarrollado por Viviana Vercesi.
+
+## Imagen del Proyecto
 
 
 

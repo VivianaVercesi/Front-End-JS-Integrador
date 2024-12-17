@@ -49,7 +49,7 @@ function listProducts(productContainer) {
                             <option value="black" id="color6">negro</option>
                             <option value="white" id="color7">blanco</option>
                         </select>
-                        <button type="submit" class="btn-in">Comprar</button>
+                        <button type="button" class="btn-in" data-id="${product.id}" data-name="${product.name}" data-price ="${product.price}" onclick="addProduct(event)" >Comprar</button>
                     </div>
                 </div>
                 `;
@@ -61,3 +61,4 @@ function listProducts(productContainer) {
             productContainer.innerHTML = '<p>No se pudo cargar el catálogo de productos</p>';
         });
 }
+

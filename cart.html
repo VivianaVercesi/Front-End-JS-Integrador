@@ -4,67 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Carrito</title>
+    <META name="description" content="Carrito de compras de mi sitio de venta de vestidos de fiesta"></META>
+    <!--Archivo de estilos-->
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+    <!--Letra para el header-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
     <header>
-        <h1>Carrito de compras</h1>
+        <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./products.html">Catálogo</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./reviews.html">Reseñas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./where.html">Ubicación</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav" id="cart-icon" hidden>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./cart.html">
+                      <i class="bi bi-cart"></i>
+                      <span class="badge position-absolute top-5 start-80 translate-middle" id="cart-count">
+                       
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+                
     </header>
     <main>
-        <section (id="products")>
-            <ul class="product-list">
+        <h1 id="cart-title">Carrito de compras</h1>
+        <div id="products-container">
+            <ul class="product-list" id="cart-list">
                 <li class="product-item">
-                    <h3></h3>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    
                 </li>
-
+                <button id="clear-cart">Vaciar Carrito</button>
             </ul>
-        </section>
-        <section (id="checkout")>
+        </div>
+        <div id="checkout">
             <h2>Resumen de compra</h2>
-            <p class="total">Total a pagar:</p>
-            <form action="" class="checkout"></form>
-
-
-        </section>
-        <footer>
-            <p> © 2024 Comercio Mayorista</p>
-        </footer>
+            <p class="total-prod"></p>
+            <p class="total"></p>
+            <button id="checkout-btn" disabled>Pagar</button>
+            <div id="payment-modal" class="modal">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h2>Datos para el pago</h2>
+                  </div>
+                  <div>
+                    <label for="name">Nombre y apellido:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+                  <div>
+                    <label for="emal">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                  </div>
+                  
+                  <form id="payment-form">
+                      <h3>Datos de la tarjeta</h3>
+                      <label for="cardNumber">Número de tarjeta (sin espacios):</label>
+                      <input type="text" id="cardNumber" name="cardNumber" required maxlength="16" placeholder="1234 1234 1234 1234">
+          
+                      <label for="cardHolder">Nombre del titular:</label>
+                      <input type="text" id="cardHolder" name="cardHolder" required >
+          
+                      <label for="expiryDate">Fecha de vencimiento (MM/AA):</label>
+                      <input type="text" id="expiryDate" name="expiryDate" required pattern="\d{2}/\d{2}" placeholder="00/00">
+          
+                      <label for="cvv">CVV:</label>
+                      <input type="text" id="cvv" name="cvv" required maxlength="3">
+          
+                      <button type="submit" id="payment-btn" disabled>Pagar</button>
+                  </form>
+                  <div class="modal-footer">
+                    <h3>Una vez realizado el pago nos contactaremos para coordinar el envío.</h3>
+                  </div>
+              </div>
+          </div>
+        </div>
     </main>  
-      <!--main
-         if !carrito.active
-            p.alert El carrito ya expiró.
-         else
-            section.products
-               h2 Productos en el carrito
-               ul.product-list
-                  - var total = 0
-                  each item in carrito.products
-                     - total += item.quantity * item.product.price
-                     li.product-item(data-id=item.product._id)
-                        h3= item.product.name
-                        p.categoria Categoría: #{item.product.category}
-                        p.precio-unitario Precio unitario: $#{item.product.price}
-                        p.cantidad Cantidad: #{item.quantity}
-                        p.precio-final Precio final: $#{item.quantity * item.product.price}
-            section.checkout
-               h2 Resumen de Compra
-               p.total Total a pagar: $#{total}
-               form.checkout-form(action='/order', method="POST")
-                  fieldset
-                     legend Modalidad de pago
-                     label(for="pago-transferencia") 
-                        input#pago-transferencia(type="radio", name="tipoPago", value="transferencia", checked) 
-                        | Transferencia bancaria
-                     br
-                     label(for="pago-credito") 
-                        input#pago-credito(type="radio", name="tipoPago", value="credito") 
-                        | Tarjeta de Crédito
-                  input(type="hidden", name="cartId", value=carrito._id)
-                  button.btn(type="submit") Comprar
-     -->
+      
+     <!--Scripts-->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+     
+     <script src="/scripts/cart.js" defer></script>                
 </body>
 </html>
