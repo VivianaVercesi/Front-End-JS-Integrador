@@ -612,6 +612,10 @@ body {
 
 }
 
+.inputNotOk {
+    color: rgb(219, 82, 82);
+    border: solid rgb(219, 82, 82);
+}
 
 
 /*Responsive*/
@@ -911,4 +915,7 @@ body {
     #checkout footer {
         font-size: 1.8rem;
     }
+    #payment-btn { 
+        font-size: 1.5rem;
+    } 
 }

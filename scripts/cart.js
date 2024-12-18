@@ -31,6 +31,7 @@ function addProduct(event) {
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCart();
     updateCartCount();
+    updateButtonState();
 }
 
 //Eliminar un producto del carrito
@@ -237,3 +238,75 @@ payment.onclick = function (event) {
     }, 2000);
 };
 
+//Validaciones
+
+const paymentForm = document.getElementById('payment-modal');
+const inputs = document.querySelectorAll('#payment-modal input');
+
+const expressions = {
+    name: /^[a-zA-ZÁ-ÿ\s]{1,48}$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    cardNumber: /^\d{16}$/,
+    cardHolder: /^[a-zA-ZÁ-ÿ\s]{1,48}$/,
+    expiryDate: /^(0[1-9]|1[0-2])\/\d{2}$/,
+    cvv: /^\d{3}$/,
+
+}
+
+const validateForm = (e) => {
+    switch (e.target.name) {
+        case "name":
+            if(expressions.name.test(e.target.value)) {
+                document.getElementById('name').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('name').classList.add('inputNotOk');
+            }
+        break;
+        case "email":
+            if(expressions.email.test(e.target.value)) {
+                document.getElementById('email').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('email').classList.add('inputNotOk');
+            }
+        break;
+        case "cardNumber":
+            if(expressions.cardNumber.test(e.target.value)) {
+                document.getElementById('cardNumber').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('cardNumber').classList.add('inputNotOk');
+            }
+        break;
+        case "cardHolder":
+            if(expressions.cardHolder.test(e.target.value)) {
+                document.getElementById('cardHolder').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('cardHolder').classList.add('inputNotOk');
+            }
+        break;
+        case "expiryDate":
+            if(expressions.expiryDate.test(e.target.value)) {
+                document.getElementById('expiryDate').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('expiryDate').classList.add('inputNotOk');
+            }
+        break;
+        case "cvv":
+            if(expressions.cvv.test(e.target.value)) {
+                document.getElementById('cvv').classList.remove('inputNotOk');
+            } else {
+                document.getElementById('cvv').classList.add('inputNotOk');
+            }
+        break;
+    }
+
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
+});
+
+paymentForm.addEventListener('submit',(e)=> {
+    e.preventDefault();
+
+})
