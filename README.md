@@ -20,10 +20,14 @@ El proyecto **El Atellier de Ana** busca crear una experiencia digital atractiva
 - **Página de "Nosotros"** con la historia de la marca.
 - **Opiniones de clientes** en una sección de reseñas.
 - **Formulario de contacto** con validación y diseño responsive.
+- **Ubicación** con dirección y mapa de la ubicación.
+- **Carrito de compras** con detalle de productos, sección checkout y formulario de pago.
+
 
 ## Tecnologías Utilizadas
 - **HTML5**: Para la estructura y contenido semántico.
 - **CSS3**: Para el diseño, incluyendo Flexbox y Grid para un diseño responsivo.
+- **JavaScript**: Para manipular el DOM y manejar eventos como la gestión del carrito de compras, la interactividad del usuario y las validaciones.
 
 ## Estructura del Proyecto
 El proyecto está organizado en los siguientes archivos y carpetas:
@@ -33,17 +37,25 @@ PROYECTO_INTEGRADOR/├── index.html # Página principal
                     ├── about.html # Página de "Nosotros" 
                     ├── reviews.html # Página de opiniones de clientes 
                     ├── contact.html # Página de contacto 
+                    ├── where.html # Página de ubicación 
+                    ├── cart.html # Página de carrito de compras 
                     ├── styles/ 
                     │    └── styles.css # Estilos principales del sitio 
-                    └── sassets/ 
-                         └── images # Imágenes utilizadas en el sitio 
+                    └── assets/ 
+                    │   └── images # Imágenes utilizadas en el sitio 
+                    └── data/ 
+                    │   └── products.json # Datos de los productos
+                    └── scripts # Imágenes utilizadas en el sitio
+                        └── cart.js # Dinámica del carrito de compras
+                        └── products.js # Dinámica de la lista de productos
+                        └── reviews.js # Dinámica de la lista de reseñas
 
 ## Instalación y Configuración
 1. **Clonar el repositorio**: Clona este proyecto en tu máquina local.
    ```bash
    git clone https://github.com/VivianaVercesi/Front-End-JS-Integrador/tree/master
    Abrir en el navegador: Abre index.html en tu navegador para ver el sitio.
-1. **Abrir con githubpages**: https://vivianavercesi.github.io/Front-End-JS-Integrador/
+2. **Abrir con githubpages**: https://vivianavercesi.github.io/Front-End-JS-Integrador/
 
 ## Autor
 Proyecto desarrollado por Viviana Vercesi.
