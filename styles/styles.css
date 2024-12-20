@@ -618,6 +618,75 @@ body {
 }
 
 
+
+
+#modal-desc {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 35%;
+    top: 28%;
+    transform: translate(-10%, -10%);
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: auto;
+    border: solid rgb(119, 96, 132);
+    border-radius: 20px;
+}
+
+#modal-header {
+    background-color: rgb(156, 136, 169);
+    color: rgb(58, 51, 62);
+    border: none;
+    padding: 3rem;
+    text-align: left;
+    padding: 4rem;
+    text-align: center;
+    font-size: 2rem;
+}
+#modal-body {
+    background-color: rgb(225, 204, 238);
+    color: rgb(58, 51, 62);
+    border: none;
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 4rem;
+}
+#modal-footer {
+    background-color: rgb(156, 136, 169);
+    color: rgb(58, 51, 62);
+    border: none;
+    padding: 3rem;
+    text-align: left;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+#close-modal {
+    margin:0;
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border: solid rgb(130, 99, 134);
+    color: rgb(89, 66, 92);
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: rgb(225, 204, 238);
+}
+#close-modal:hover {
+    background-color: rgb(89, 66, 92);
+    color: whitesmoke;
+    
+}
+
+
+
+
 /*Responsive*/
 
 @media (min-width: 480px) {

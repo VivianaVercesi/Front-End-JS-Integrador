@@ -1,6 +1,7 @@
 // Actualizar la cantidad en la navbar
 function updateCartCount() {
     var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log("Carrito actual:", cart); // Verificar contenido del carrito
     var cartCount = document.querySelector("#cart-count");
     if (!cartCount) {
         console.error("El elemento #cart-count no se encontró en el DOM.");
@@ -149,6 +150,16 @@ function updateButtonState() {
         chkBtn.disabled = true;
     }
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("checkout-btn"); 
+    if (button) {
+        button.onclick = () => {
+            console.log("Botón clickeado");
+        };
+    } else {
+        console.error("El botón no existe en el DOM.");
+    }
+});
 
 // Modal 
 var modal = document.getElementById("payment-modal");
@@ -165,6 +176,7 @@ function validatePaymentForm() {
 
     payment.disabled = !isValid;
 }
+
 // Abro el modal al clickear en el botón checkout
 btn.onclick = function () {
     modal.style.display = "block";

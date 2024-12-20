@@ -6,10 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("No se encontró el contenedor de productos en el DOM.");
         return; // Termina la ejecución si no encuentra el contenedor
     }
-
+    console.log("Product container:", productContainer);
     listProducts(productContainer); // Pasa el contenedor como argumento
 });
 
+const productContainer = document.getElementById('product-container');
 console.log("Product container:", productContainer);
 function listProducts(productContainer) {
 
@@ -48,11 +49,44 @@ function listProducts(productContainer) {
                             <option value="black" id="color6">negro</option>
                             <option value="white" id="color7">blanco</option>
                         </select>
+                        <button type="button" 
+                            class="btn-plus" 
+                            data-id="${product.id}" 
+                            data-name="${product.name}" 
+                            data-description="${product.description}">+
+                        </button>
                         <button type="button" class="btn-in" data-id="${product.id}" data-name="${product.name}" data-price ="${product.price}" onclick="addProduct(event)" >Comprar</button>
                     </div>
                 </div>
                 `;
                 productContainer.innerHTML += productCard;
+                
+            });
+            
+            // Asignar eventos al botón "+" para abrir el modal
+            const plusButtons = document.querySelectorAll(".btn-plus");
+            plusButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const productName = event.target.getAttribute('data-name');
+                    const productDescription = event.target.getAttribute('data-description');
+                    ;
+
+                    // Mostrar el modal con la información del producto
+                    const modal = document.getElementById("modal-desc");
+                    const modalHeader = document.getElementById("modal-header");
+                    const modalBody = document.getElementById("modal-body");
+                    const modalFooter = document.getElementById("modal-footer");
+
+                    // Comprobar si los datos se están pasando correctamente
+                    console.log("Modal Data:", productName, productDescription);
+
+                    modalHeader.innerHTML =  `<h2>${productName}</h2>`;
+                    modalBody.innerHTML =`
+                        <p> ${productDescription}</p>
+                    `;
+
+                    modal.style.display = "block"; // Muestra el modal
+                });
             });
         })
         .catch((error) => {
@@ -60,4 +94,12 @@ function listProducts(productContainer) {
             productContainer.innerHTML = '<p>No se pudo cargar el catálogo de productos</p>';
         });
 }
+
+
+// Cerrar el modal
+const closeModalButton = document.getElementById("close-modal");
+closeModalButton.addEventListener("click", () => {
+    const modal = document.getElementById("modal-desc");
+    modal.style.display = "none";
+});
 
