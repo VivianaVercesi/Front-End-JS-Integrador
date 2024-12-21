@@ -1,3 +1,5 @@
+
+
 // Actualizar la cantidad en la navbar
 function updateCartCount() {
     var cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -76,6 +78,7 @@ function clearCart() {
 //Actualizar el carrito
 function updateCart() {
     var cart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log("Productos en el carrito:", cart);
     var cartList = document.getElementById("cart-list");
     if (!cartList) return;
     cartList.innerHTML = "";
@@ -133,23 +136,11 @@ function updateCart() {
 document.addEventListener("DOMContentLoaded", function () {
     updateCart();
     updateCartCount();
-    updateButtonState();
+    //updateButtonState();
    
 });
 
-//Función para habilitar/deshabilitar el botón que abre el modal
-function updateButtonState() {
-    var cart = JSON.parse(localStorage.getItem("cart")) || [];
-    var chkBtn = document.querySelector("#checkout-btn");
 
-    if (cart.length > 0) {
-        // Si hay productos en el carrito, habilitar el botón
-        chkBtn.disabled = false;
-    } else {
-        // Si el carrito está vacío, deshabilitar el botón
-        chkBtn.disabled = true;
-    }
-}
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("checkout-btn"); 
     if (button) {
@@ -162,38 +153,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Modal 
-var modal = document.getElementById("payment-modal");
-var btn = document.getElementById("checkout-btn");
-var payment = document.getElementById("payment-btn");
+const modal = document.getElementById("payment-modal");
+const checkoutBtn = document.getElementById("checkout-btn");
+const paymentBtn = document.getElementById("payment-btn");
 
-// Función para verificar si los campos están completos
-function validatePaymentForm() {
-    var requiredFields = ["name", "email", "cardNumber", "cardHolder", "expiryDate", "cvv"];
-    var isValid = requiredFields.every(id => {
-        var field = document.getElementById(id);
-        return field && field.value.trim() !== "";
-    });
-
-    payment.disabled = !isValid;
+if (!checkoutBtn) {
+    console.error("El botón 'checkout-btn' no se encontró en el DOM.");
 }
 
 // Abro el modal al clickear en el botón checkout
-btn.onclick = function () {
-    modal.style.display = "block";
+checkoutBtn.addEventListener("click", (event) => {
+    
+    console.log("checkoutBtn clickeado");
 
-    // Restablecer el estado inicial del botón de pago
-    validatePaymentForm();
+       modal.style.display = "block"; // Muestra el modal
+       
 
     // Escuchar los cambios en los campos del formulario
     var paymentForm = document.getElementById("payment-form");
-    paymentForm?.addEventListener("input", validatePaymentForm);
-};
+    
+});
+
 
 // Al clickear pagar cierro el modal y vacío el carrito
-payment.onclick = function (event) {
-    
-
+paymentBtn.addEventListener("click",(event) => {
     // Mostrar mensaje de agradecimiento
+    console.log("paymentBtn clickeado");
     var modalContent = document.querySelector(".modal-content");
     modalContent.innerHTML = "<h2>¡Gracias por su compra!</h2>";
 
@@ -248,7 +233,8 @@ payment.onclick = function (event) {
             </div>
         `;
     }, 2000);
-};
+})
+
 
 //Validaciones
 
@@ -265,60 +251,51 @@ const expressions = {
 
 }
 
-const validateForm = (e) => {
-    switch (e.target.name) {
-        case "name":
-            if(expressions.name.test(e.target.value)) {
-                document.getElementById('name').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('name').classList.add('inputNotOk');
-            }
-        break;
-        case "email":
-            if(expressions.email.test(e.target.value)) {
-                document.getElementById('email').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('email').classList.add('inputNotOk');
-            }
-        break;
-        case "cardNumber":
-            if(expressions.cardNumber.test(e.target.value)) {
-                document.getElementById('cardNumber').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('cardNumber').classList.add('inputNotOk');
-            }
-        break;
-        case "cardHolder":
-            if(expressions.cardHolder.test(e.target.value)) {
-                document.getElementById('cardHolder').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('cardHolder').classList.add('inputNotOk');
-            }
-        break;
-        case "expiryDate":
-            if(expressions.expiryDate.test(e.target.value)) {
-                document.getElementById('expiryDate').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('expiryDate').classList.add('inputNotOk');
-            }
-        break;
-        case "cvv":
-            if(expressions.cvv.test(e.target.value)) {
-                document.getElementById('cvv').classList.remove('inputNotOk');
-            } else {
-                document.getElementById('cvv').classList.add('inputNotOk');
-            }
-        break;
+// Estado de los campos del formulario
+const fields = {
+    name: false,
+    email: false,
+    cardNumber: false,
+    cardHolder: false,
+    expiryDate: false,
+    cvv: false,
+};
+
+// Validar campo individual
+const validateField = (expression, input, field) => {
+    if (expression.test(input.value)) {
+        input.classList.remove('inputNotOk');
+        input.classList.add('inputOk');
+        fields[field] = true;
+    } else {
+        input.classList.add('inputNotOk');
+        input.classList.remove('inputOk');
+        fields[field] = false;
     }
+    checkFormValidity(); // Verificar si todo el formulario es válido
+};
 
-}
+// Verificar si todos los campos son válidos
+const checkFormValidity = () => {
+    const allValid = Object.values(fields).every(value => value === true);
+    paymentBtn.disabled = !allValid; // Habilitar o deshabilitar el botón
+};
 
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validateForm);
-    input.addEventListener('blur', validateForm);
+// Escuchar eventos en los inputs
+inputs.forEach(input => {
+    input.addEventListener('keyup', (e) => {
+        validateField(expressions[e.target.name], e.target, e.target.name);
+    });
+    input.addEventListener('blur', (e) => {
+        validateField(expressions[e.target.name], e.target, e.target.name);
+    });
 });
 
-paymentForm.addEventListener('submit',(e)=> {
-    e.preventDefault();
+// Inicializar el botón como deshabilitado
+document.addEventListener('DOMContentLoaded', () => {
+    paymentBtn.disabled = true;
+});
 
-})
+
+
+
