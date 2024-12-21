@@ -163,10 +163,25 @@ if (!checkoutBtn) {
 
 // Abro el modal al clickear en el botón checkout
 checkoutBtn.addEventListener("click", (event) => {
-    
-    console.log("checkoutBtn clickeado");
+    const countElement = document.getElementById("cart-count"); 
+    const countText = countElement?.innerText.trim();
+    console.log("Contenido original de #cart-count:", countText);
+    const cleanedText = countText.replace(/[^\d]/g, "");
+    const count = Number(cleanedText);
 
-       modal.style.display = "block"; // Muestra el modal
+    if (isNaN(isNaN(count) || cleanedText === "")) {
+        console.error("El valor de 'cart-count' no es un número válido:", countText);
+        alert("Hubo un error al verificar el carrito. Inténtalo de nuevo.");
+        return;
+    }
+
+    // Verificar si el carrito tiene elementos
+    if (count > 0) {
+        modal.style.display = "block"; // Muestra el modal
+        console.log("cant", count);
+    } else {
+        alert("El carrito está vacío. Agrega productos antes de proceder al pago."); // Muestra un mensaje
+    }
        
 
     // Escuchar los cambios en los campos del formulario
@@ -279,6 +294,7 @@ const validateField = (expression, input, field) => {
 const checkFormValidity = () => {
     const allValid = Object.values(fields).every(value => value === true);
     paymentBtn.disabled = !allValid; // Habilitar o deshabilitar el botón
+    
 };
 
 // Escuchar eventos en los inputs
@@ -295,7 +311,6 @@ inputs.forEach(input => {
 document.addEventListener('DOMContentLoaded', () => {
     paymentBtn.disabled = true;
 });
-
 
 
 
