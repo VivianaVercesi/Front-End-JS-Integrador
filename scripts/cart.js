@@ -307,6 +307,24 @@ inputs.forEach(input => {
     });
 });
 
+// Función para borrar los datos del formulario
+function clearFormData() {
+    var formFields = ["name", "email", "cardNumber", "cardHolder", "expiryDate", "cvv"];
+    formFields.forEach(function(fieldId) {
+        var field = document.getElementById(fieldId);
+        if (field) {
+            field.value = ''; // Limpiar los campos
+        }
+    });
+}
+
+// Obtener el botón de "Cerrar y Borrar Datos" y agregar el evento
+var clearDataBtn = document.getElementById("cancel-btn");
+clearDataBtn.addEventListener("click", function() {
+    clearFormData(); // Limpiar los campos
+    modal.style.display = "none"; // Cerrar el modal
+});
+
 // Inicializar el botón como deshabilitado
 document.addEventListener('DOMContentLoaded', () => {
     paymentBtn.disabled = true;
